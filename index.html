@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- HTML5 -->
+<!-- Página de uma Calculadora Interativa -->
+<html lang="pt-br"> <!-- Idioma português -->
+<head>
+    <meta charset="UTF-8"> <!-- UTF-8 para caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <title>Calculadora</title> <!-- Título da página -->
+    <link rel="stylesheet" href="style.css"> <!-- CSS externo -->
+</head>
+<body>
+    <!-- Container centraliza calculadora -->
+    <div class="container">
+        <!-- Calculadora principal -->
+        <div class="calculadora">
+            <!-- Display mostra números -->
+            <div class="display">
+                <input type="text" id="display" readonly> <!-- Input dos números -->
+            </div>
+            <!-- Botões em grid 4x5 -->
+            <div class="botoes">
+                <!-- Linha 1: Controle -->
+                <button class="btn btn-limpar" onclick="limpar()">C</button> <!-- Limpa -->
+                <button class="btn btn-operador" onclick="adicionar('/')">÷</button> <!-- Divisão -->
+                <button class="btn btn-operador" onclick="adicionar('*')">×</button> <!-- Multiplicação -->
+                <button class="btn btn-delete" onclick="deletar()">⌫</button> <!-- Delete -->
+
+                <!-- Linha 2: 7,8,9 -->
+                <button class="btn" onclick="adicionar('7')">7</button>
+                <button class="btn" onclick="adicionar('8')">8</button>
+                <button class="btn" onclick="adicionar('9')">9</button>
+                <button class="btn btn-operador" onclick="adicionar('-')">−</button> <!-- Subtração -->
+
+                <!-- Linha 3: 4,5,6 -->
+                <button class="btn" onclick="adicionar('4')">4</button>
+                <button class="btn" onclick="adicionar('5')">5</button>
+                <button class="btn" onclick="adicionar('6')">6</button>
+                <button class="btn btn-operador" onclick="adicionar('+')">+</button> <!-- Adição -->
+
+                <!-- Linha 4: 1,2,3 -->
+                <button class="btn" onclick="adicionar('1')">1</button>
+                <button class="btn" onclick="adicionar('2')">2</button>
+                <button class="btn" onclick="adicionar('3')">3</button>
+                <button class="btn btn-operador" onclick="adicionar('.')">,</button> <!-- Ponto -->
+
+                <!-- Linha 5: 0 e = -->
+                <button class="btn btn-zero" onclick="adicionar('0')">0</button> <!-- Número 0 (2 cols) -->
+                <button class="btn btn-igual" onclick="calcular()">=</button> <!-- Calcula (2 cols) -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- JavaScript externo -->
+</body>
+</html>

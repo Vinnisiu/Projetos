@@ -1,0 +1,135 @@
+* {
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+    box-sizing: border-box; /* Inclui padding na largura/altura */
+}
+
+body {
+    display: flex; /* Flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima da tela */
+    background: linear-gradient(135deg, #031567 0%, #270f3f 100%); /* Gradiente roxo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+}
+
+.container {
+    display: flex; /* Flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Ocupa 100% da largura */
+    height: 100vh; /* Ocupa 100% da altura */
+}
+
+.calculadora {
+    background: rgb(35, 35, 35); /* Fundo branco */
+    border-radius: 20px; /* Cantos arredondados */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Sombra */
+    padding: 20px; /* Espaço interno */
+    width: 320px; /* Largura fixa */
+}
+
+.display {
+    margin-bottom: 20px; /* Espaço embaixo */
+}
+
+#display {
+    width: 100%; /* Ocupa 100% da largura */
+    padding: 20px; /* Espaço interno */
+    font-size: 32px; /* Tamanho grande da fonte */
+    border: 2px solid #e0e0e0; /* Borda cinza */
+    border-radius: 10px; /* Cantos arredondados */
+    text-align: right; /* Alinha texto à direita */
+    background: #f9f9f9; /* Fundo cinzento */
+    color: #333; /* Texto cinza escuro */
+    font-weight: 500; /* Texto mais grosso */
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+#display:focus {
+    outline: none; /* Remove outline */
+    border-color: #667eea; /* Borda roxo */
+    background: #fcfcfc; /* Fundo mais claro */
+}
+
+.botoes {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    gap: 10px; /* Espaço entre botões */
+}
+
+.btn {
+    padding: 20px; /* Espaço interno */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Texto mais gordo */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Cantos arredondados */
+    background: #f0f0f0; /* Fundo cinza claro */
+    color: #333; /* Texto cinza escuro */
+    cursor: pointer; /* Cursor de clique */
+    transition: all 0.2s; /* Transição suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.btn:hover {
+    background: #e0e0e0; /* Fundo mais escuro */
+    transform: translateY(-2px); /* Sobe 2 pixels */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais forte */
+}
+
+.btn:active {
+    transform: translateY(0); /* Volta à posição original */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra reduzida */
+}
+
+.btn-operador {
+    background: #667eea; /* Fundo roxo */
+    color: white; /* Texto branco */
+    font-weight: 700; /* Texto mais gordo */
+}
+
+.btn-operador:hover {
+    background: #5568d3; /* Roxo mais escuro */
+}
+
+.btn-limpar {
+    background: #ff6b6b; /* Fundo vermelho */
+    color: white; /* Texto branco */
+    font-weight: 700; /* Texto mais gordo */
+}
+
+.btn-limpar:hover {
+    background: #ee5a52; /* Vermelho mais escuro */
+}
+
+.btn-delete {
+    background: #ffa94d; /* Fundo laranja */
+    color: white; /* Texto branco */
+}
+
+.btn-delete:hover {
+    background: #ff922b; /* Laranja mais escuro */
+}
+
+.btn-zero {
+    grid-column: span 2; /* Ocupa 2 colunas */
+}
+
+.btn-igual {
+    grid-column: span 2; /* Ocupa 2 colunas */
+    background: #51cf66; /* Fundo verde */
+    color: white; /* Texto branco */
+    font-weight: 700; /* Texto mais gordo */
+    font-size: 24px; /* Fonte maior */
+}
+
+.btn-igual:hover {
+    background: #40c057; /* Verde mais escuro */
+}
+
+@media (max-width: 400px) {
+    .calculadora {
+        width: 100%; /* 100% da largura */
+        max-width: 320px; /* Largura máxima */
+    }
+}
